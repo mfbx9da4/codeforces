@@ -17,14 +17,15 @@ def read_int_array(): return list(map(int, input().split(' ')))
 def int_array_to_string(arr, sep=' '): return sep.join(map(str, arr))
 
 
-def solve(number):
-    print('number', number)
+def solve(x, y, a, b):
+    ans = (y - x) / (a + b)
+    if int(ans) == ans:
+        return print(int(ans))
+    return print(-1)
 
 
 T = read_int()
 
 for i in range(T):
-    N = read_int()
-    print('M', N)
-    number = read_int()
-    solve(number)
+    x, y, a, b = read_int_array()
+    solve(x, y, a, b)

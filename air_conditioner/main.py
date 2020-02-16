@@ -17,14 +17,17 @@ def read_int_array(): return list(map(int, input().split(' ')))
 def int_array_to_string(arr, sep=' '): return sep.join(map(str, arr))
 
 
-def solve(number):
-    print('number', number)
+def solve(array, M):
+    print('array, M', array, M)
 
 
 T = read_int()
 
 for i in range(T):
-    N = read_int()
-    print('M', N)
-    number = read_int()
-    solve(number)
+    N, M = read_int_array()
+    print('N, M', N, M)
+    array = []
+    for i in range(N):
+        t, l, h = read_int_array()
+        array.append({'t': t, 'l': l, 'h': h})
+    solve(array, M)
